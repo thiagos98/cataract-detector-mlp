@@ -12,7 +12,14 @@ st.set_page_config(**PAGE_CONFIG)
 
 def main():
   st.title("Sistema para identificar casos de Catarata por meio de imagens")
+  
+  st.subheader("Foto de exemplo")
+  
+  image = Image.open("./image/example.jpg")
+  st.image(image, caption="Foto olho saudável")
+
   st.subheader("Por favor, insira a foto de um olho para diagnostico:")
+
   uploaded_file = st.file_uploader("Selecionar imagem")
   
   if(uploaded_file != None):
