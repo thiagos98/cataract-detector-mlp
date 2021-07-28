@@ -68,40 +68,35 @@ img = img.resize((128, 128))
 
 new_img = np.asarray(img)
 new_img = new_img.reshape(1, 49152).astype('float32')
-new_img
 
 new_img /= 255
 new_img.shape
 
 prediction = mlp.predict(new_img)
+print(f'Olho Saudável: {prediction}')
 
-mlp.score(x, y)
+print(f'Score: {mlp.score(x, y)}')
 
 
-# %%
 # img = Image.open('/content/drive/My Drive/Colab Notebooks/ia/teste/cataract/image0.jpg')
 img = Image.open('./teste/cataract/image0.jpg')
 img = img.resize((128, 128))
-img
 
 
-# %%
 new_img = np.asarray(img)
 new_img = new_img.reshape(1, 49152).astype('float32')
-new_img
 
 new_img /= 255
 new_img.shape
-new_img
 
 prediction = mlp.predict(new_img)
-print(prediction)
+print(f'Olho Com Catarata: {prediction}')
 
 import pickle
 pickle.dump(mlp,open('new_model.pkl','wb')) #saving our model in .pkl file
 
 # Aplicação web
-
+"""
 get_ipython().run_cell_magic('writefile', 'app.py', 'import streamlit as st\nfrom PIL import Image\nimport numpy as np\n\nimport pickle\n#loading our model\nmodel = pickle.load(open(\'new_model.pkl\',\'rb\'))\n\nPAGE_CONFIG = {"page_title":"StColab.io","page_icon":":smiley:","layout":"centered"}\nst.set_page_config(**PAGE_CONFIG)\n\n\ndef main():\n  st.title("Sistema para identificar casos de Catarata por meio de imagens")\n  st.subheader("Por favor, insira a foto de um olho para diagnostico:")\n  uploaded_file = st.file_uploader("Selecionar imagem")\n  \n  if(uploaded_file != None):\n    st.image(uploaded_file, caption=\'Imagem enviada\')\n    img = Image.open(uploaded_file)\n    img = img.resize((128, 128))\n    new_img = np.asarray(img)\n    new_img = new_img.reshape(1, 49152).astype(\'float32\')\n    new_img /= 255\n    #new_img.shape\n\n    prediction = model.predict(new_img)\n    st.write(prediction)\n\n\n\nif __name__ == \'__main__\':\n  main()')
 
 
@@ -121,6 +116,6 @@ get_ipython().system('pgrep streamlit')
 
 publ_url = ngrok.connect('8501')
 
-publ_url
+publ_url"""
 
 
