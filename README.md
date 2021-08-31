@@ -1,6 +1,6 @@
 # Detector de Catarata por meio de imagens
 
-<h3> Sistema detector de catarata por meio de imagens que utiliza a técnica de Multi Layer Perceptron.</h3>
+<h3> Ferramenta para detectar catarata por meio de imagens que utiliza a técnica de MultiLayer Perceptron.</h3>
 
 <h4>Ferramentas</h4>
 <ul>
