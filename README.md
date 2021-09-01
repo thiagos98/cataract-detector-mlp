@@ -18,9 +18,9 @@
 </ul>
 
 <h4><strong>Contribuidores</strong></h4>
-<li>
-  <ul><a href="https://github.com/AntunesAna">Ana Jessye Alemeida Antunes</a></ul>
-  <ul><a href="https://github.com/YasserTuma">YasserTuma</a></ul>
-</li>
+<ul>
+  <li><a href="https://github.com/AntunesAna">Ana Jessye Alemeida Antunes</a></li>
+  <li><a href="https://github.com/YasserTuma">YasserTuma</a></li>
+</ul>
 
 <a href="https://1drv.ms/u/s!Al4V1XqvEXSxg-Zhgwifh1NCGj6tbQ?e=D1t7yG">Projeto com Notebook</a>
