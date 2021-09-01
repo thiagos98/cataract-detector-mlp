@@ -12,6 +12,8 @@ st.set_page_config(**PAGE_CONFIG)
 
 def main():
   st.title("Sistema para identificar casos de Catarata por meio de imagens")
+
+  st.text('Sistema meramente acadêmico, NÃO LEVAR EM CONSIDERAÇÃO PARA CASOS REAIS!')
   
   st.subheader("Foto de exemplo")
   
